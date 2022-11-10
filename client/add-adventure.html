@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="add-adventure.css">
+    <title>VEER Add Adventure</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="./index.html">VEER</a>
+            <a class="menu" href="./index.html">Home</a>
+        </nav>
+    </header>
+        <main>
+            <section class="new-adventure">
+                <form class="add-form" autocomplete="off">
+                    <h2>Add An Adventure</h2>
+                    <label for="country-select">Select Country</label>
+                    <select id="country-select" class="country-select"></select>
+
+                    <label for="adventure-name">Adventure Name</label>
+                    <input type="text" id="adventure-name" class="adventure-name" maxlength="50">
+
+                    <label for="adventure-cost">Adventure Cost</label>
+                    <input type="text" id="adventure-cost" class="adventure-cost" placeholder="Include currency (dollars, euros, etc)">
+
+                    <label for="adventure-desc">Adventure Description</label>
+                    <textarea id="adventure-desc" class="adventure-desc" maxlength="2000" placeholder="Tell us how to get to your adventure, and anything else you think we should know..."></textarea>
+                    <div class="btn">
+                        <label for="submission"></label>
+                        <button class="submit-btn">Submit</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>tarzancamm</p>
+        </footer>
+    </div>
+<script src="../node_modules/axios/dist/axios.min.js"></script>
+<script src="add-adventure.js"></script>
+</body>
+</html>

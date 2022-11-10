@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>VEER Hidden Spots</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="./index.html">VEER</a>
+            <a class="menu" href="./add-adventure.html">Add My Adventure</a>
+        </nav>
+    </header>
+        <div class="title">
+            <h1>VEER INTO AN ADVENTURE</h1>
+        </div>
+        <!-- <div class="instructions">
+            <p class="step-one">Click on a country to find your next adventure</p>
+            <p class="step-two">Experience novelty</p>
+        </div> -->
+        <section class="country-container">
+            <input type="image" src="./style_resources/netherlands-g2fee937ff_640.png" data-modal-target="#modal" class="card one" id="netherlands" countryid=1 />
+            <input type="image" src="./style_resources/spain-gb4af5b869_640.png" data-modal-target="#modal" class="card two" id="spain" countryid=2 />
+            <input type="image" src="./style_resources/france-map-g904b60f0d_640.png" data-modal-target="#modal" class="card three" id="france" countryid=3 />
+            <input type="image" src="./style_resources/borders-g5cf6fa271_1280.png" data-modal-target="#modal" class="card four" id="indonesia" countryid=4/>
+            <input type="image" src="./style_resources/great-britain-g734162cd7_640.png" data-modal-target="#modal" class="card five" id="england" countryid=5 />
+            <input type="image" src="./style_resources/argentina-ga2da85c70_1280.png" data-modal-target="#modal" class="card six" id="argentina" countryid=6 />
+        </section>
+
+        <section id="modalContainer"></section>
+        <div id="overlay"></div>
+
+        <footer>
+            <p>tarzancamm</p>
+        </footer>
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
