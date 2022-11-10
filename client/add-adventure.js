@@ -29,7 +29,7 @@ const submitHandler = (e) => {
         adventureDescription: adventureDescription.value
     }
 
-    axios.post('http://localhost:6996/adventures', body)
+    axios.post('/adventures', body)
         .then(() => {
             alert ('Your adventure has successfully been added.')
         })
@@ -41,7 +41,7 @@ const submitHandler = (e) => {
 }
 
 const getCountries = () => {
-    axios.get('http://localhost:6996/countries')
+    axios.get('/countries')
     .then((res) => {
         res.data.forEach(country => {
             const option = document.createElement('option')

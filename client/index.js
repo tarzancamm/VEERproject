@@ -16,7 +16,7 @@ openModalButtons.forEach(button => {
 
         let countryid = event.target.getAttribute('countryid')
 
-        axios.get(`http://localhost:6996/adventures/${countryid}`)
+        axios.get(`/adventures/${countryid}`)
         .then((res) => {
             console.log(res.data)
             res.data.forEach(elem => {
