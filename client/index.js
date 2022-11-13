@@ -23,7 +23,6 @@ openModalButtons.forEach(button => {
                     `<div class="modal" id="modal">
                          <div class="modal-header">
                             <div class="modal-title">${elem.country}</div>
-                            <button data-close-button class="close-btn">&times;</button>
                         </div>
                         <div class="modal-body">
                             <p class="adventure-name">${elem.adventure}</p>
@@ -72,3 +71,4 @@ function closeModal(modal) {
     overlay.classList.remove('active')
 }
 
+// Close modal button, if implemented: <button data-close-button class="close-btn">&times;</button>
