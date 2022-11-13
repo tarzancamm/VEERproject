@@ -27,7 +27,7 @@ module.exports = {
             adventure_id SERIAL PRIMARY KEY,
             adventure_name VARCHAR(50) NOT NULL,
             adventure_cost VARCHAR(20),
-            description VARCHAR(1500) NOT NULL,
+            description VARCHAR(450) NOT NULL,
             country_id INTEGER REFERENCES countries(country_id)
         );
 
