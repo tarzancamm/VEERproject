@@ -61,7 +61,7 @@ table {
     z-index: 1;
     top: 0;
     position: fixed;
-    height: 72px;
+    height: 4.5rem;
     width: 100%;
     border-bottom: 1px solid grey;
     display: flex;
@@ -72,7 +72,7 @@ table {
 
 .navbar > .logo {
     font-family: 'Abril Fatface', cursive;
-    font-size: 32px;
+    font-size: 2rem;
     margin-left: 4%;
     color: #00171F;
     text-decoration: none;
@@ -86,7 +86,7 @@ table {
 
 .navbar > div > .menu {
     font-family: 'Kantumruy Pro', sans-serif;
-    font-size: 15px;
+    font-size: .9rem;
     font-weight: bold;
     text-decoration: none;
     color:#00171F;
@@ -108,7 +108,7 @@ table {
 
 .navbar > div > .login-btn {
     font-family: 'Kantumruy Pro', sans-serif;
-    font-size: 15px;
+    font-size: .9rem;
     font-weight: bold;
     text-decoration: none;
     color:#00171F;
@@ -138,7 +138,7 @@ body {
 .title {
     font-family: 'Kantumruy Pro', sans-serif;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 3.125rem;
     color:#00171F;
     text-align: center;
     margin-top: 200px;
@@ -148,7 +148,7 @@ body {
 
 .instructions {
     font-family: 'Kantumruy Pro', sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     text-align: center;
     color: #1282A2;
     margin-bottom: 75px;
@@ -243,7 +243,7 @@ body {
 }
 
 .modal-title {
-    font-size: 32px;
+    font-size: 2rem;
     font-family: 'Kantumruy Pro', sans-serif;
     font-weight: bold;
 }
@@ -253,7 +253,7 @@ body {
     border: none;
     outline: none;
     background: none;
-    font-size: 35px;
+    font-size: 2.1875rem;
     font-weight: bold;
 }
 
@@ -266,39 +266,39 @@ body {
 
 .adventure-name {
     font-family: 'Kantumruy Pro', sans-serif;
-    font-size: 23px;
+    font-size: 1.4375rem;
     font-weight: bold;
     padding-bottom: 30px;
 }
 
 .cost-heading {
     font-family: 'Kantumruy Pro', sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     text-decoration: underline;
     padding-bottom: 10px;
 }
 
 .adventure-cost {
     font-family: 'Kantumruy Pro', sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     padding-bottom: 25px;
 }
 
 .description-heading {
     font-family: 'Kantumruy Pro', sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     text-decoration: underline;
     padding-bottom: 10px;
 }
 
 .adventure-description {
     font-family: 'Kantumruy Pro', sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .delete-btn {
     font-family: 'Kantumruy Pro', sans-serif;
-    font-size: 12px;
+    font-size: .8rem;
     font-weight: bold;
     letter-spacing: 1px;
     width: 125px;
@@ -309,6 +309,13 @@ body {
     cursor: pointer;
     padding: 8px;
     margin-top: 45px;
+}
+
+.delete-btn:active {
+    box-shadow: none;
+    transform: scale(0.8);
+    background-color: #00171F;
+    color: #FAFAFF;
 }
 
 #overlay {
