@@ -1,8 +1,11 @@
 // Base URL
 const baseURL = 'http://localhost:6996/'
 
+// Error callback
+const errCallback = err => console.log(err)
+
 // Grab items home page
-const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const openModalButtons = document.querySelectorAll('[data-modal-target]') //attribute selector uses brackets
 const closeModalButtons = document.querySelectorAll('[data-close-button]') //attribute selector uses brackets
 const overlay = document.getElementById('overlay')
 const modalContainer = document.getElementById('modalContainer')
@@ -30,6 +33,7 @@ openModalButtons.forEach(button => {
                             <p class="adventure-cost">${elem.adventure_cost}</p>
                             <p class="description-heading">What You Need To Know</p>
                             <p class="adventure-description">${elem.description}</p>
+                            <button class="delete-btn" onclick="deleteAdventure(${elem.adventure_id})">DELETE</button>
                         </div>
                     </div>`
     
@@ -42,6 +46,18 @@ openModalButtons.forEach(button => {
         })
     })
 })
+
+const deleteAdventure = (adventureid) => {
+    axios.delete(`/countries/${adventureid}`)
+    .then(() => {
+        alert ('The adventure has been deleted')
+
+    const modal = document.querySelectorAll('.modal.active')
+    modal.forEach(modal => {
+        closeModal(modal)
+    })
+    })
+}
 
 
 // Other functions

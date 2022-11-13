@@ -271,13 +271,20 @@ body {
     padding-bottom: 30px;
 }
 
+.cost-heading {
+    font-family: 'Kantumruy Pro', sans-serif;
+    font-size: 16px;
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+
 .adventure-cost {
     font-family: 'Kantumruy Pro', sans-serif;
     font-size: 16px;
     padding-bottom: 25px;
 }
 
-.cost-heading {
+.description-heading {
     font-family: 'Kantumruy Pro', sans-serif;
     font-size: 16px;
     text-decoration: underline;
@@ -289,11 +296,19 @@ body {
     font-size: 16px;
 }
 
-.description-heading {
+.delete-btn {
     font-family: 'Kantumruy Pro', sans-serif;
-    font-size: 16px;
-    text-decoration: underline;
-    padding-bottom: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 125px;
+    border: 0;
+    color: #FAFAFF;
+    background-color: #E5625E;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px;
+    margin-top: 45px;
 }
 
 #overlay {

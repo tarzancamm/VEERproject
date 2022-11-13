@@ -1,6 +1,9 @@
 // Base URL
 const baseURL = 'http://localhost:6996/'
 
+// Error callback
+const errCallback = err => console.log(err)
+
 // Grab items add adventure page
 const form = document.querySelector('form')
 const countrySelect = document.querySelector('#country-select')

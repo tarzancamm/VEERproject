@@ -78,7 +78,7 @@ module.exports = {
         const { countryid } = req.params
 
         sequelize.query(`
-        SELECT adventures.adventure_name AS adventure, adventures.adventure_cost, adventures.description, countries.country_name as country
+        SELECT adventures.adventure_name AS adventure, adventures.adventure_cost, adventure_id, adventures.description, countries.country_name as country
         FROM adventures
         JOIN countries
         ON adventures.country_id = countries.country_id
@@ -90,6 +90,21 @@ module.exports = {
             res.status(200).send(dbRes[0])
         })
         .catch(err => console.log('Error retrieving random adventure', err))
+    },
+
+    deleteAdventure: (req, res) => {
+
+        const { adventureid } = req.params
+
+        sequelize.query(`
+        DELETE
+        FROM adventures
+        WHERE adventure_id = ${adventureid}
+        `)
+        .then((dbRes) => {
+            res.status(200).send(dbRes[0])
+        })
+        .catch(err => console.log('Error deleting adventure', err))
     }
 
 }

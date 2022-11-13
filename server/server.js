@@ -4,7 +4,7 @@ const app = express()
 const cors = require('cors')
 const path = require('path')
 require('dotenv').config()
-const { seed, getCountries, submitAdventure, getAdventure } = require('./controller')
+const { seed, getCountries, submitAdventure, getAdventure, deleteAdventure } = require('./controller')
 
 // Middleware
 app.use(express.json())
@@ -81,6 +81,7 @@ app.get('/image-six', (req, res) => {
 
 // Endpoints functionality
 app.get('/countries', getCountries)
+app.delete('/countries/:adventureid', deleteAdventure)
 app.post('/adventures', submitAdventure)
 app.get('/adventures/:countryid', getAdventure)
 
