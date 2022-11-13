@@ -14,6 +14,7 @@ app.use(cors())
 // Seed DB
 app.post('/seed', seed)
 
+
 // Endpoints connecting HTML, CSS and JS
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/index.html'))
@@ -25,6 +26,18 @@ app.get('/style', (req, res) => {
 
 app.get('/js', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/index.js'))
+})
+
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/login.html'))
+})
+
+app.get('/login/style', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/login.css'))
+})
+
+app.get('/login/js', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/login.js'))
 })
 
 app.get('/add-adventure', (req, res) => {
@@ -70,6 +83,7 @@ app.get('/image-six', (req, res) => {
 app.get('/countries', getCountries)
 app.post('/adventures', submitAdventure)
 app.get('/adventures/:countryid', getAdventure)
+
 
 // Runs server
 const {PORT} = process.env || 6996

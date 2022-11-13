@@ -78,25 +78,52 @@ table {
     text-decoration: none;
 }
 
-.navbar > .menu {
+.navbar > div {
+    display: flex;
+    flex-direction: row;
+    margin-right: 4%;
+}
+
+.navbar > div > .menu {
     font-family: 'Kantumruy Pro', sans-serif;
     font-size: 15px;
     font-weight: bold;
-    margin-right: 4%;
     text-decoration: none;
     color:#00171F;
+    padding-right: 35px;
 }
 
-.navbar > .menu:hover {
+.navbar > div > .menu:hover {
     color: #E5625E;
 }
 
-.navbar > .menu:visited {
+.navbar > div > .menu:visited {
     color: #00171F;
     text-decoration: none;
 }
 
-.navbar > .menu:visited:hover {
+.navbar > div > .menu:visited:hover {
+    color: #E5625E;
+}
+
+.navbar > div > .login-btn {
+    font-family: 'Kantumruy Pro', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color:#00171F;
+}
+
+.navbar > div > .login-btn:hover {
+    color: #E5625E;
+}
+
+.navbar > div > .login-btn:visited {
+    color: #00171F;
+    text-decoration: none;
+}
+
+.navbar > div > .login-btn:visited:hover {
     color: #E5625E;
 }
 

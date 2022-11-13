@@ -18,7 +18,6 @@ openModalButtons.forEach(button => {
 
         axios.get(`/adventures/${countryid}`)
         .then((res) => {
-            console.log(res.data)
             res.data.forEach(elem => {
                 let adventureCard = 
                     `<div class="modal" id="modal">
@@ -73,7 +72,3 @@ function closeModal(modal) {
     overlay.classList.remove('active')
 }
 
-
-
-
-// Event listeners
