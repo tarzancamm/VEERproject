@@ -4,15 +4,6 @@ const loginForm = document.querySelector('#login-form')
 
 
 // Registration functions
-const register = (body) => axios.post('/register', body)
-    .then(res => {
-        alert("Registration successful")
-        regForm.reset()
-    })
-    .catch(err => {
-        alert('Registration unsuccessful')
-    })
-
 const registerUser = (e) => {
     e.preventDefault()
 
@@ -69,18 +60,18 @@ const registerUser = (e) => {
     register(bodyObj);
 }
 
-
-// Sign In Functions
-
-const login = (body) => axios.post('/login', body)
+const register = (body) => axios.post('/register', body)
     .then(res => {
-        alert("Login successful")
-        userDashboard()
+        alert("Registration successful")
+        regForm.reset()
     })
     .catch(err => {
-        alert("Invalid login credentials")
+        alert('Registration unsuccessful')
     })
 
+
+
+// Sign In Functions
 const loginUser = (e) => {
     e.preventDefault()
 
@@ -95,11 +86,19 @@ const loginUser = (e) => {
     login(bodyObj)
 }
 
+const login = (body) => axios.post('/login', body)
+    .then(res => {
+        alert("Login successful")
+        userDashboard()
+    })
+    .catch(err => {
+        alert("Invalid login credentials")
+    })
+
 
 // User Dashboard
-
 const userDashboard = () => {
-    
+
 }
 
 
