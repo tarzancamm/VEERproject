@@ -238,6 +238,7 @@ footer {
     .country-select {
         width: 50%;
         max-width: 100%;
+        padding: .5rem;
     }
     
     .adventure-name {
