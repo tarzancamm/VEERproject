@@ -63,7 +63,7 @@ app.get('/image-two', (req, res) => {
 })
 
 app.get('/image-three', (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/style_resources/france.png"))
+    res.sendFile(path.join(__dirname, "../client/style_resources/england.png"))
 })
 
 app.get('/image-four', (req, res) => {
@@ -71,11 +71,11 @@ app.get('/image-four', (req, res) => {
 })
 
 app.get('/image-five', (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/style_resources/england.png"))
+    res.sendFile(path.join(__dirname, "../client/style_resources/france.png"))
 })
 
 app.get('/image-six', (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/style_resources/argentina.png"))
+    res.sendFile(path.join(__dirname, "../client/style_resources/italy.png"))
 })
 
 

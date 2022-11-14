@@ -90,7 +90,7 @@ table {
     font-weight: bold;
     text-decoration: none;
     color:#00171F;
-    padding-right: 35px;
+    padding-right: 2.1875rem;
 }
 
 .navbar > div > .menu:hover {
@@ -141,8 +141,8 @@ body {
     font-size: 3.125rem;
     color:#00171F;
     text-align: center;
-    margin-top: 200px;
-    margin-bottom: 140px;
+    margin-top: 12.5rem;
+    margin-bottom: 8.75rem;
     letter-spacing: 5px;
 }
 
@@ -151,13 +151,14 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 150px;
+    margin-bottom: 10%;
 }
 
 .card {
-    margin-bottom: 100px;
+    margin-bottom: 7.8125rem;
     border-radius: 10px;
 }
 
@@ -180,23 +181,23 @@ body {
 }
 
 .three {
-    width: 320px;
+    width: 216px;
     height: 300px;
 }
 
 .four {
-    width: 330px;
-    height: 250px;
+    width: 300px;
+    height: 150px;
 }
 
 .five {
-    width: 265px;
-    height: 290px;
+    width: 300px;
+    height: 260px;
 }
 
 .six {
-    width: 200px;
-    height: 360px;
+    width: 276px;
+    height: 330px;
 }
 
 
@@ -214,7 +215,7 @@ body {
     background-color: #FAFAFF;
     width: 650px;
     max-width: 80%;
-    padding: 20px 20px;
+    padding: 1.25rem 1.25rem;
 }
 
 .modal.active {
@@ -222,8 +223,8 @@ body {
 }
 
 .modal-header {
-    padding: 10px 15px;
-    padding-bottom: 20px;
+    padding: .625rem .9375rem;
+    padding-bottom: 1.25rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -246,37 +247,37 @@ body {
 }
 
 .modal-body {
-    padding-bottom: 10px;
-    padding-top: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-bottom: .625rem;
+    padding-top: 1.875rem;
+    padding-left: .9375rem;
+    padding-right: .9375rem;
 }
 
 .adventure-name {
     font-family: 'Kantumruy Pro', sans-serif;
     font-size: 1.4375rem;
     font-weight: bold;
-    padding-bottom: 30px;
+    padding-bottom: 1.875rem;
 }
 
 .cost-heading {
     font-family: 'Kantumruy Pro', sans-serif;
     font-size: 1rem;
     text-decoration: underline;
-    padding-bottom: 10px;
+    padding-bottom: .625rem;
 }
 
 .adventure-cost {
     font-family: 'Kantumruy Pro', sans-serif;
     font-size: 1rem;
-    padding-bottom: 25px;
+    padding-bottom: 1.5625rem;
 }
 
 .description-heading {
     font-family: 'Kantumruy Pro', sans-serif;
     font-size: 1rem;
     text-decoration: underline;
-    padding-bottom: 10px;
+    padding-bottom: .625rem;
 }
 
 .adventure-description {
@@ -295,8 +296,8 @@ body {
     background-color: #E5625E;
     border-radius: 5px;
     cursor: pointer;
-    padding: 8px;
-    margin-top: 45px;
+    padding: .5rem;
+    margin-top: 2.8125rem;
 }
 
 .delete-btn:active {
@@ -330,7 +331,7 @@ footer {
     text-align: center;
     font-family: 'Kantumruy Pro', sans-serif;
     font-weight: bold;
-    padding-bottom: 25px;
+    padding-bottom: 1.5625rem;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
@@ -345,8 +346,8 @@ footer {
 
     .title {
         font-size: 2.5rem;
-        margin-top: 172px;
-        margin-bottom: 100px;
+        margin-top: 10.75rem;
+        margin-bottom: 6.25rem;
     }
 
 }

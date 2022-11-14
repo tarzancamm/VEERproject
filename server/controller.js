@@ -34,10 +34,10 @@ module.exports = {
         INSERT INTO countries (country_name) 
         values ('Netherlands'),
         ('Spain'),
-        ('France'),
-        ('Indonesia'),
         ('England'),
-        ('Argentina');
+        ('Indonesia'),
+        ('France'),
+        ('Italy');
 
         `).then(() => {
             console.log('Database seeded')
