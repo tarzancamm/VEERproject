@@ -172,31 +172,37 @@ body {
 
 .one {
     width: 300px;
+    max-width: 300px;
     height: 300px;
 }
 
 .two {
     width: 360px;
+    max-width: 360px;
     height: 260px;
 }
 
 .three {
     width: 216px;
+    max-width: 216px;
     height: 300px;
 }
 
 .four {
     width: 300px;
+    max-width: 300px;
     height: 150px;
 }
 
 .five {
     width: 300px;
+    max-width: 300px;
     height: 260px;
 }
 
 .six {
     width: 276px;
+    max-width: 276px;
     height: 330px;
 }
 

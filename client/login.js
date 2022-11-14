@@ -53,7 +53,6 @@ const registerUser = (e) => {
       first_name: regFirstName.value,
       last_name: regLastName.value,
       email: regEmail.value,
-      is_tech: 0,
       password: regPassword.value
     };
   
@@ -98,7 +97,7 @@ const login = (body) => axios.post('/login', body)
 
 // User Dashboard
 const userDashboard = () => {
-
+    
 }
 
 
