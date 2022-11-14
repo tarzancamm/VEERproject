@@ -11,7 +11,7 @@ app.use(express.json())
 app.use(cors())
 
 
-// Seed DB
+// Seed database
 app.post('/seed', seed)
 
 
