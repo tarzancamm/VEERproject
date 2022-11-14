@@ -235,6 +235,21 @@ footer {
         margin-bottom: 35px;
     }
 
+    .country-select {
+        width: 50%;
+        max-width: 100%;
+    }
+    
+    .adventure-name {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .adventure-cost {
+        width: 100%;
+        max-width: 100%;
+    }
+
     .submit-btn {
         margin-top: 10px;
     }
