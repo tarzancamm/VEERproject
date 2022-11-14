@@ -28,29 +28,12 @@ app.get('/adventure/js', (req, res) => res.sendFile(path.join(__dirname, '../cli
 
 
 // Endpoints connecting images
-app.get('/image-one', (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/style_resources/netherlands.png"))
-})
-
-app.get('/image-two', (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/style_resources/spain.png"))
-})
-
-app.get('/image-three', (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/style_resources/england.png"))
-})
-
-app.get('/image-four', (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/style_resources/indonesia.png"))
-})
-
-app.get('/image-five', (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/style_resources/france.png"))
-})
-
-app.get('/image-six', (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/style_resources/italy.png"))
-})
+app.get('/image-one', (req, res) => res.sendFile(path.join(__dirname, "../client/style_resources/netherlands.png")))
+app.get('/image-two', (req, res) => res.sendFile(path.join(__dirname, "../client/style_resources/spain.png")))
+app.get('/image-three', (req, res) => res.sendFile(path.join(__dirname, "../client/style_resources/england.png")))
+app.get('/image-four', (req, res) => res.sendFile(path.join(__dirname, "../client/style_resources/indonesia.png")))
+app.get('/image-five', (req, res) => res.sendFile(path.join(__dirname, "../client/style_resources/france.png")))
+app.get('/image-six', (req, res) => res.sendFile(path.join(__dirname, "../client/style_resources/italy.png")))
 
 
 // Endpoints functionality
