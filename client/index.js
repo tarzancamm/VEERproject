@@ -1,6 +1,3 @@
-// Base URL
-const baseURL = 'http://localhost:6996/'
-
 // Error callback
 const errCallback = err => console.log(err)
 
@@ -50,7 +47,16 @@ openModalButtons.forEach(button => {
 const deleteAdventure = (adventureid) => {
     axios.delete(`/countries/${adventureid}`)
     .then(() => {
-        alert ('The adventure has been deleted')
+        Swal.fire({
+            text:'Successfully deleted',
+            color: '#00171F',
+            padding: '1.2rem 0 4rem 0',
+            showConfirmButton: false,
+            icon: 'success',
+            iconColor: '#1282A2',
+            timer: '2000',
+            timerProgressBar: 'true'
+        })
 
     const modal = document.querySelectorAll('.modal.active')
     modal.forEach(modal => {

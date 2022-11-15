@@ -1,6 +1,3 @@
-// Base URL
-const baseURL = 'http://localhost:6996/'
-
 // Error callback
 const errCallback = err => console.log(err)
 
@@ -16,12 +13,26 @@ const submitHandler = (e) => {
     e.preventDefault()
 
     if (adventureName.value < 1 ) {
-        alert ('You must enter an Adventure Name!')
+        Swal.fire({
+            text:'Include an adventure name!',
+            color: '#00171F',
+            padding: '1.2rem 0 3.7rem 0',
+            confirmButtonColor: '#1282A2',
+            icon: 'error',
+            iconColor: '#E5625E',
+        })
         return
     }
 
     if (adventureDescription.value < 1) {
-        alert ('You must enter an Adventure Description!')
+        Swal.fire({
+            text:'Include an adventure description!',
+            color: '#00171F',
+            padding: '1.2rem 0 3.7rem 0',
+            confirmButtonColor: '#1282A2',
+            icon: 'error',
+            iconColor: '#E5625E',
+        })
         return
     }
 
@@ -34,7 +45,16 @@ const submitHandler = (e) => {
 
     axios.post('/adventures', body)
         .then(() => {
-            alert ('Your adventure has successfully been added.')
+            Swal.fire({
+                text:'Successfully added!',
+                color: '#00171F',
+                padding: '1.2rem 0 3.7rem 0',
+                showConfirmButton: false,
+                icon: 'success',
+                iconColor: '#1282A2',
+                timer: '2000',
+                timerProgressBar: 'true'
+            })
         })
 
     countrySelect.value = 1

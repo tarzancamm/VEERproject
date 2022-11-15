@@ -3,7 +3,7 @@ const regForm = document.querySelector('#register-form')
 const loginForm = document.querySelector('#login-form')
 
 
-// Registration functions
+// Registration function
 const registerUser = (e) => {
     e.preventDefault()
 
@@ -55,11 +55,8 @@ const registerUser = (e) => {
       email: regEmail.value,
       password: regPassword.value
     };
-  
-    register(bodyObj);
-}
 
-const register = (body) => axios.post('/register', body)
+    axios.post('/register', bodyObj)
     .then(res => {
         alert("Registration successful")
         regForm.reset()
@@ -67,38 +64,38 @@ const register = (body) => axios.post('/register', body)
     .catch(err => {
         alert('Registration unsuccessful')
     })
-
-
-
-// Sign In Functions
-const loginUser = (e) => {
-    e.preventDefault()
-
-    const email = document.querySelector('#login-email')
-    const password = document.querySelector('#login-password')
-
-    let bodyObj = {
-        email: email.value,
-        password: password.value
-    }
-
-    login(bodyObj)
 }
 
-const login = (body) => axios.post('/login', body)
-    .then(res => {
-        alert("Login successful")
-        userDashboard()
-    })
-    .catch(err => {
-        alert("Invalid login credentials")
-    })
+
+
+// Sign In Function
+// const loginUser = (e) => {
+//     e.preventDefault()
+
+//     const email = document.querySelector('#login-email')
+//     const password = document.querySelector('#login-password')
+
+//     let bodyObj = {
+//         email: email.value,
+//         password: password.value
+//     }
+
+//     axios.post('/login', bodyObj)
+//     .then(res => {
+//         alert("Login successful")
+//         window.localStorage.setItem('token', res.data.email)
+//         userDashboard()
+//     })
+//     .catch(err => {
+//         alert("Invalid login credentials")
+//     })
+// }
 
 
 // User Dashboard
-const userDashboard = () => {
-    
-}
+// const userDashboard = () => {
+
+// }
 
 
 

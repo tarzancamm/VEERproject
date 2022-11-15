@@ -4,7 +4,7 @@ const app = express()
 const cors = require('cors')
 const path = require('path')
 require('dotenv').config()
-const { seed, getCountries, submitAdventure, getAdventure, deleteAdventure } = require('./controller')
+const { seed, getCountries, submitAdventure, getAdventure, deleteAdventure, registerUser } = require('./controller')
 
 // Middleware
 app.use(express.json())
@@ -41,6 +41,8 @@ app.get('/countries', getCountries)
 app.delete('/countries/:adventureid', deleteAdventure)
 app.post('/adventures', submitAdventure)
 app.get('/adventures/:countryid', getAdventure)
+app.post('/register', registerUser)
+// app.post('/login', loginUser)
 
 
 // Runs server

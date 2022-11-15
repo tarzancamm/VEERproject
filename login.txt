@@ -1,0 +1,12 @@
+Stuff I need
+- persist a user's session when they login or signup
+- if a user is already logged in and authenticated, we will create a token in local storage. For simplicity, this will just be the user's email (not secure)
+- when a user logs out, the local storage needs to be cleared of any token
+- when a user logs in/registers, that local storage needs to be created
+- when the page is loaded, we need to check if there is local storage with a user's login already. If it exists with a valid account, then go to home page of app and skip signin page
+- any backend requests that require a user to be logged in when made, need to send the token with them and have it verified that it is an actual account with every associated controller function
+
+3 ways to store
+- local storage
+- cookies
+- cache
