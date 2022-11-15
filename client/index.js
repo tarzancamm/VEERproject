@@ -3,7 +3,6 @@ const errCallback = err => console.log(err)
 
 // Grab items home page
 const openModalButtons = document.querySelectorAll('[data-modal-target]') //attribute selector uses brackets
-const closeModalButtons = document.querySelectorAll('[data-close-button]') //attribute selector uses brackets
 const overlay = document.getElementById('overlay')
 const modalContainer = document.getElementById('modalContainer')
 
@@ -74,13 +73,6 @@ overlay.addEventListener('click', () => {
     })
 })
 
-closeModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const modal = button.closest('.modal')
-        closeModal(modal)
-    })
-})
-
 function openModal(modal) {
     if (modal == null) return
     modal.classList.add('active')
@@ -92,5 +84,3 @@ function closeModal(modal) {
     modal.classList.remove('active')
     overlay.classList.remove('active')
 }
-
-// Close modal button, if implemented: <button data-close-button class="close-btn">&times;</button>

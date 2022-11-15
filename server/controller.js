@@ -105,36 +105,6 @@ module.exports = {
             res.status(200).send(dbRes[0])
         })
         .catch(err => console.log('Error deleting adventure', err))
-    },
-
-    registerUser: (req, res) => {
-        const { first_name, last_name, email, password } = req.body
-
-        sequelize.query(`
-        INSERT INTO users (first_name, last_name, email, password)
-        VALUES ('${first_name}', '${last_name}', '${email}', '${password}')
-        `)
-        .then((dbRes) => {
-            res.status(200).send(dbRes[0])
-        })
-        .catch(err => console.log('Error registering user', err))
     }
 
-    // loginUser: (req, res) => {
-
-    //     const { email, password } = req.body
-
-    //     sequelize.query(`
-    //     SELECT email, password
-    //     FROM users
-    //     WHERE ${email} = email, ${password} = password
-    //     `)
-
-
-
-    //     dbRes[0] > 1 then success
-    //     otherwise, there are no matching credentials
-
-    //     send back all adventures for user
-    // }
 }

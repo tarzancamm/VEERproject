@@ -4,7 +4,7 @@ const app = express()
 const cors = require('cors')
 const path = require('path')
 require('dotenv').config()
-const { seed, getCountries, submitAdventure, getAdventure, deleteAdventure, registerUser } = require('./controller')
+const { seed, getCountries, submitAdventure, getAdventure, deleteAdventure } = require('./controller')
 
 // Middleware
 app.use(express.json())
@@ -19,9 +19,6 @@ app.post('/seed', seed)
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../client/index.html')))
 app.get('/style', (req, res) => res.sendFile(path.join(__dirname, '../client/style.css')))
 app.get('/js', (req, res) => res.sendFile(path.join(__dirname, '../client/index.js')))
-app.get('/login', (req, res) => res.sendFile(path.join(__dirname, '../client/login.html')))
-app.get('/login/style', (req, res) => res.sendFile(path.join(__dirname, '../client/login.css')))
-app.get('/login/js', (req, res) => res.sendFile(path.join(__dirname, '../client/login.js')))
 app.get('/add-adventure', (req, res) => res.sendFile(path.join(__dirname, '../client/add-adventure.html')))
 app.get('/adventure/style', (req, res) => res.sendFile(path.join(__dirname, '../client/add-adventure.css')))
 app.get('/adventure/js', (req, res) => res.sendFile(path.join(__dirname, '../client/add-adventure.js')))
@@ -41,8 +38,6 @@ app.get('/countries', getCountries)
 app.delete('/countries/:adventureid', deleteAdventure)
 app.post('/adventures', submitAdventure)
 app.get('/adventures/:countryid', getAdventure)
-app.post('/register', registerUser)
-// app.post('/login', loginUser)
 
 
 // Runs server

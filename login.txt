@@ -10,3 +10,296 @@ Stuff I need
 - local storage
 - cookies
 - cache
+
+
+// Login HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security</title>
+    <link rel="stylesheet" href="/login/style">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="/">VEER</a>
+            <a class="menu" href="/">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <form id="login-form">
+            <h1>Log In</h1>
+            <input 
+                type='text'
+                id="login-email"
+                placeholder="Email"/>
+            <input 
+                type='password'
+                id="login-password"
+                placeholder='Password'/>
+            <button>Sign In</button>
+        </form>
+        <form id="register-form">
+            <h1>Register</h1>
+            <input 
+                type='text'
+                id="register-email"
+                placeholder='Email'/>
+            <input 
+                type='text'
+                id="register-firstName"
+                placeholder='First Name'/>
+            <input 
+                type='text'
+                id="register-lastName"
+                placeholder='Last Name'/>
+            <input 
+                type='password'
+                id="register-password"
+                placeholder='Password'/>
+            <input 
+                type='password'
+                id="register-password-2"
+                placeholder='Confirm Password'/>
+            <button>Register</button>
+        </form>
+
+    <section id="user-info"></section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/login/js"></script>
+</body>
+</html>
+
+
+
+// Login CSS 
+
+/* Navbar */
+.navbar {
+    z-index: 1;
+    top: 0;
+    position: fixed;
+    height: 72px;
+    width: 100%;
+    border-bottom: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FAFAFF;
+}
+
+.navbar > .logo {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 32px;
+    margin-left: 4%;
+    color: #00171F;
+    text-decoration: none;
+}
+
+.navbar > .menu {
+    font-family: 'Kantumruy Pro', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 4%;
+    text-decoration: none;
+    color:#00171F;
+}
+
+.navbar > .menu:hover {
+    color: #E5625E;
+}
+
+.navbar > .menu:visited {
+    color: #00171F;
+    text-decoration: none;
+}
+
+.navbar > .menu:visited:hover {
+    color: #E5625E;
+}
+
+/* Login */
+body {
+    background-color: #FAFAFF;
+}
+
+main {
+    margin-top: 4.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    font-family: 'Kantumruy Pro', sans-serif;
+    font-weight: bold;
+    font-size: 1.875rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    margin-top: 10%;
+}
+
+form > input {
+    font-family: 'Kantumruy Pro', sans-serif;
+}
+
+
+
+// Login JS 
+// Select Forms
+const regForm = document.querySelector('#register-form')
+const loginForm = document.querySelector('#login-form')
+
+
+// Registration function
+const registerUser = (e) => {
+    e.preventDefault()
+
+    const regEmail = document.querySelector('#register-email')
+    const regFirstName = document.querySelector('#register-firstName')
+    const regLastName = document.querySelector('#register-lastName')
+    const regPassword = document.querySelector('#register-password')
+    const regConfirmPassword = document.querySelector('#register-password-2')
+
+    // Check for invalid password inputs using REGEX
+    let errors = []
+    const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    switch(true) {
+      case (regPassword.value !== regConfirmPassword.value):
+        errors.push({message: "Your passwords need to match."});
+        break;
+      case (regPassword.value.length < 10):
+        errors.push({message: "Password must contain at least 10 characters."});
+        break;
+      case (!/[0-9]+/g.test(regPassword.value)): 
+        errors.push({message: "Password must contain at least one number."});
+        break;
+      case (!/[a-z]+/g.test(regPassword.value)):
+        errors.push({message: "Password must contain at least one lowercase letter."});
+        break;
+      case (!/[A-Z]+/g.test(regPassword.value)):
+        errors.push({message: "Password must contain at least one uppercase letter."});
+        break;
+      case (!specialChars.test(regPassword.value)):
+        errors.push({message: "Password must contain at least one special character."});
+        break;
+      default:
+        true;
+        break;
+    };
+
+    if (errors.length > 0) {
+      alert(`${errors[0].message}`);
+      return errors;
+    } else if (errors.length == 0) {
+      console.log("Password accepted.");
+    } else {
+      alert("Please choose another password.");
+    };
+  
+    let bodyObj = {
+      first_name: regFirstName.value,
+      last_name: regLastName.value,
+      email: regEmail.value,
+      password: regPassword.value
+    };
+
+    axios.post('/register', bodyObj)
+    .then(res => {
+        alert("Registration successful")
+        regForm.reset()
+    })
+    .catch(err => {
+        alert('Registration unsuccessful')
+    })
+}
+
+
+
+// Sign In Function
+// const loginUser = (e) => {
+//     e.preventDefault()
+
+//     const email = document.querySelector('#login-email')
+//     const password = document.querySelector('#login-password')
+
+//     let bodyObj = {
+//         email: email.value,
+//         password: password.value
+//     }
+
+//     axios.post('/login', bodyObj)
+//     .then(res => {
+//         alert("Login successful")
+//         window.localStorage.setItem('token', res.data.email)
+//         userDashboard()
+//     })
+//     .catch(err => {
+//         alert("Invalid login credentials")
+//     })
+// }
+
+
+// User Dashboard
+// const userDashboard = () => {
+
+// }
+
+
+// Event Listeners
+regForm.addEventListener('submit', registerUser)
+loginForm.addEventListener('submit', loginUser)
+
+
+
+// Login Server
+app.get('/login', (req, res) => res.sendFile(path.join(__dirname, '../client/login.html')))
+app.get('/login/style', (req, res) => res.sendFile(path.join(__dirname, '../client/login.css')))
+app.get('/login/js', (req, res) => res.sendFile(path.join(__dirname, '../client/login.js')))
+
+app.post('/register', registerUser)
+app.post('/login', loginUser)
+
+
+// Login controller
+registerUser: (req, res) => {
+        const { first_name, last_name, email, password } = req.body
+
+        sequelize.query(`
+        INSERT INTO users (first_name, last_name, email, password)
+        VALUES ('${first_name}', '${last_name}', '${email}', '${password}')
+        `)
+        .then((dbRes) => {
+            res.status(200).send(dbRes[0])
+        })
+        .catch(err => console.log('Error registering user', err))
+    }
+
+    // loginUser: (req, res) => {
+
+    //     const { email, password } = req.body
+
+    //     sequelize.query(`
+    //     SELECT email, password
+    //     FROM users
+    //     WHERE ${email} = email, ${password} = password
+    //     `)
+
+
+
+    //     dbRes[0] > 1 then success
+    //     otherwise, there are no matching credentials
+
+    //     send back all adventures for user
+    // }
+

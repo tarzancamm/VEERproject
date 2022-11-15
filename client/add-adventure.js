@@ -52,7 +52,7 @@ const submitHandler = (e) => {
                 showConfirmButton: false,
                 icon: 'success',
                 iconColor: '#1282A2',
-                timer: '2000',
+                timer: '2300',
                 timerProgressBar: 'true'
             })
         })
