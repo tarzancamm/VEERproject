@@ -1,7 +1,7 @@
  VEER
  ======
 
-**Use the app:** www.veerproject.herokuapp.com/ 
+**Use the app:** https://veerproject.herokuapp.com/ 
 
 **Learn more about the developer:** www.linkedin.com/in/cameron-miner-professional/
 
@@ -12,7 +12,7 @@ Users can find random adventures by clicking on the country of their choice. A m
 
 ![homepage view](./client/style_resources/VEERhomepage.png)
 ![homepage modal view](./client/style_resources/VEERhomepageModal.png)
-![add adventure mobile view](./client/style_resources/VEERmobileAdd.png)
+![add adventure mobile view](./client/style_resources/VEERaddadventureview.png)
 
 
 #### Tech Stack
