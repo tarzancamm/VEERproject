@@ -33,4 +33,4 @@ Users can find random adventures by clicking on the country of their choice. A m
 Users can login to VEER, where they will have the option to submit adventures & view/delete their submitted adventures. The "delete" button will no longer display on the homepage, and the Add My Adventure form will be integrated into each individual user's dashboard.
 
 ##### Save Adventures
-Uses can save their favorite adventures, and view those adventures on their personal dashboard.
+Uses can save their favorite adventures, and view those saved adventures on their personal dashboard.
