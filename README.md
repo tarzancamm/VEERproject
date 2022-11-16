@@ -3,6 +3,8 @@
 
 **Use the app:** https://veerproject.herokuapp.com/ 
 
+**Watch a demo:** https://vimeo.com/771739000 
+
 **Learn more about the developer:** www.linkedin.com/in/cameron-miner-professional/
 
 Mainstream tourist attractions are overrated. VEER is a full-stack web app that helps you find unique and cultural adventures to do on your next trip abroad.
