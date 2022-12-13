@@ -9,7 +9,7 @@
 
 Mainstream tourist attractions are overrated. VEER is a full-stack web app that helps you find unique and cultural adventures to do on your next trip abroad.
 
-Users can find random adventures by clicking on the country of their choice. A modal window displays the name of the adventure, cost and any pertinent information needed to find or do the adventure. Anyone can add an adventure to VEER - just click Add My Adventure in the upper righthand corner and fill out the Add An Adventure form. A postgreSQL database houses the adventures, and returns a random adventure each time a user clicks on a country on the homepage.
+Users can find random adventures by clicking on the country of their choice. A modal window displays the name of the adventure, cost and any pertinent information needed to find or do the adventure. Anyone can add an adventure to VEER - just click Add My Adventure in the upper righthand corner and fill out the Add An Adventure form. A PostgreSQL database houses the adventures, and returns a random adventure each time a user clicks on a country on the homepage.
 
 
 ![homepage view](./client/style_resources/VEERhomepage.png)
@@ -20,7 +20,7 @@ Users can find random adventures by clicking on the country of their choice. A m
 #### Tech Stack
 
 * JavaScript
-* NodeJS
+* Node.js
 * Express
 * PostgreSQL
 * HTML/CSS
